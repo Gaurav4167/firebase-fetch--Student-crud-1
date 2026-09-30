@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h4 class="top-heding">Students data Management</h4>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-10 offset-1">
+                <div class="card bg-light-blue p-3">
+                    <div class="card-header p-0">
+                        <h3 class="form-heading"><b>Add Student</b></h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="form">
+
+                            <label class="" for="fname"><b>F Name</b></label>
+                            <input class="form-control mb-4" type="text" id="fname" placeholder="Student First Name"
+                                required>
+
+                            <label class="" for="lname"><b>L Name</b></label>
+                            <input class="form-control mb-4" type="text" id="lname" placeholder="Last Name">
+
+                            <label class="" for="contactNumber"><b>Contact</b></label>
+                            <input class="form-control mb-4" type="number" id="contactNumber" placeholder="Contact number"
+                                required minlength="10" maxlength="10">
+
+                            <label class="" for="course"><b>Course</b></label>
+                            <input class="form-control mb-4" type="text" id="course" placeholder="e.g MEAN Stack"
+                                required>
+
+                            <label class="" for="fees"><b>Fees</b></label>
+                            <input class="form-control mb-4" type="text" id="fees" placeholder="... < 100000" required>
+
+                            <button id="addBtn" class="btn btn-primary border shadow"><b>Add</b></button>
+
+                            <button id="updateBtn" type="button" class="btn btn-primary border shadow d-none"><b>Update</b></button>
+
+                            <button id="cancelBtn" type="button" class="btn btn-danger border shadow"><b>Cancel</b></button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-10 offset-1">
+                <h3 class="student-data-heading"><b>-- Student Data Table --</b></h3>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-10 offset-1">
+                <table class="table table-hover  bg-green text-white">
+                    <thead class="bg-black">
+                        <tr>
+                            <th>Sr No.</th>
+                            <th>Name</th>
+                            <th>Contact No</th>
+                            <th>Course</th>
+                            <th>Fees</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Gaurav Patil</td>
+                            <td>9022703423</td>
+                            <td>MEAN Stack</td>
+                            <td>50000</td>
+                            <td><button class="btn btn-warning shadow">Edit</button></td>
+                            <td><button class="btn btn-danger shadow">Delete</button></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
