@@ -3,9 +3,8 @@ var cl = console.log;
 
 studentsArr = [];
 
-
-const BASE_URL = `https://gaurav-1st-db-default-rtdb.firebaseio.com/`
-const STUDENT_URL = `${BASE_URL}/fetchStudents/.json`
+const BASE_URL = `https://gaurav2-1b96d-default-rtdb.firebaseio.com/`
+const STUDENT_URL = `${BASE_URL}/Student2fetch.json`
 
 const form = document.getElementById("form");
 const fname = document.getElementById("fname");
@@ -47,7 +46,7 @@ function createNewStudent(eve) {
             return res.json()
         })
         .then(data => {
-            // cl(data)
+
             let tr = document.createElement("tr")
             tr.id = data.name
             tr.innerHTML = `
